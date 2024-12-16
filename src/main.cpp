@@ -37,6 +37,9 @@ void parseJson(char* json);
 AsyncWebServer server(80);
 AsyncWebSocket aws("/ws");
 
+
+const char index_html[] PROGMEM = GetHtml();
+/*
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
@@ -88,7 +91,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
    }
-   /*.button:hover {background-color: #0f8b8d}*/
    .button:active {
      background-color: #0f8b8d;
      box-shadow: 2 2px #CDCDCD;
@@ -287,6 +289,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 </body>
 </html>
 )rawliteral";
+*/
 
 void notifyClients() {
   aws.textAll(String(ledState));

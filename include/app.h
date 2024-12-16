@@ -1,3 +1,3 @@
 #include <fstream>
 
-char* getHtml(char*);
+char* GetHtml();
